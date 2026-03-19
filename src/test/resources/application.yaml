@@ -1,0 +1,12 @@
+spring:
+  # Disable SQL data initialization for tests
+  sql:
+    init:
+      mode: never
+  
+  # JPA/Hibernate Configuration for tests
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
