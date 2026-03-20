@@ -56,7 +56,7 @@ The Mortgage API provides endpoints to retrieve current mortgage interest rates 
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/HamedRahmani/mortgage.git
    cd mortgage
    ```
 
