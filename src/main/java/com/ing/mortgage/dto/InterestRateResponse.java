@@ -6,5 +6,6 @@ import java.time.LocalDate;
 public record InterestRateResponse(
         int maturityPeriod,
         BigDecimal interestRate,
-        LocalDate validFrom) {
+        LocalDate validFrom,
+        LocalDate validTo) {
 }

@@ -40,7 +40,8 @@ public class InterestRateService {
         return new InterestRateResponse(
                 entity.getMaturityPeriod(),
                 entity.getInterestRate(),
-                entity.getValidFrom()
+                entity.getValidFrom(),
+                entity.getValidTo()
         );
     }
 }

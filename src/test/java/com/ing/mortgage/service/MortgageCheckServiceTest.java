@@ -29,7 +29,7 @@ class MortgageCheckServiceTest {
 
     @BeforeEach
     void setUp() {
-        interestRateResponse = new InterestRateResponse(10, new BigDecimal("4.25"), LocalDate.of(2026, 1, 1));
+        interestRateResponse = new InterestRateResponse(10, new BigDecimal("4.25"), LocalDate.of(2026, 1, 1), null);
     }
 
     private MortgageCheckRequest createRequest(String income, String loanAmount, String homeValue, int maturityPeriod) {
@@ -118,7 +118,7 @@ class MortgageCheckServiceTest {
     @DisplayName("Should use different maturity periods")
     void checkMortgageFeasibility_ShouldUseDifferentMaturityPeriods() {
         var request = createRequest("100000", "200000", "300000", 20);
-        var rate20Years = new InterestRateResponse(20, new BigDecimal("4.75"), LocalDate.of(2026, 1, 1));
+        var rate20Years = new InterestRateResponse(20, new BigDecimal("4.75"), LocalDate.of(2026, 1, 1), null);
         when(interestRateService.getInterestRateByMaturityPeriod(20)).thenReturn(rate20Years);
 
         var result = mortgageCheckService.checkMortgageFeasibility(request);

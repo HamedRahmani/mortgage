@@ -33,9 +33,9 @@ class InterestRateControllerTest {
     void getInterestRates_ShouldReturnListOfRates() throws Exception {
         LocalDate validFrom = LocalDate.of(2026, 1, 1);
         var sampleRates = List.of(
-                new InterestRateResponse(5, new BigDecimal("4.00"), validFrom),
-                new InterestRateResponse(10, new BigDecimal("4.25"), validFrom),
-                new InterestRateResponse(20, new BigDecimal("4.75"), validFrom)
+                new InterestRateResponse(5, new BigDecimal("4.00"), validFrom, null),
+                new InterestRateResponse(10, new BigDecimal("4.25"), validFrom, null),
+                new InterestRateResponse(20, new BigDecimal("4.75"), validFrom, null)
         );
         when(interestRateService.getInterestRates()).thenReturn(sampleRates);
 
