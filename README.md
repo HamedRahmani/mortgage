@@ -62,6 +62,7 @@ The Mortgage API provides endpoints to retrieve current mortgage interest rates 
 
 2. Build the project:
    ```bash
+   export JAVA_HOME=$(/usr/libexec/java_home -v 21) 
    ./mvnw clean install
    ```
 
